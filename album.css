@@ -17,6 +17,7 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    animation: fadeInAlbum 0.6s ease;
 }
 
 header {
@@ -75,6 +76,18 @@ ul {
     margin: 10px 0 0;
     padding-left: 1.2rem;
     color: #555;
+}
+
+@keyframes fadeInAlbum {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* Botón principal y efectos de carga */

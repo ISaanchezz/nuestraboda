@@ -170,8 +170,24 @@
             } catch (e) { }
         }
 
+        function updateLandingConfirmButtonFromStorage() {
+            const cta = document.getElementById('landing-confirm-btn');
+            if (!cta) return;
+
+            const key = getInviteStorageKey();
+            if (!key) return;
+
+            try {
+                if (localStorage.getItem(key) === '1') {
+                    cta.textContent = '✔ Asistencia confirmada';
+                    cta.classList.add('btn-primary--confirmed');
+                }
+            } catch (e) { }
+        }
+
         window.addEventListener('load', () => {
             personalizeGuestLanding();
+            updateLandingConfirmButtonFromStorage();
         });
 
         function enableMesasLink() {

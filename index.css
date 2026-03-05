@@ -20,6 +20,7 @@
             min-height: 100vh;
             position: relative;
             z-index: 0;
+            animation: fadeIn 0.6s ease;
         }
 
         /* Modo noche automático (ligero) */
@@ -111,6 +112,18 @@
 
         body.night-mode #spotify-wrapper p {
             color: #ccc !important;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         /* Capa muy suave con la imagen de fondo */
@@ -271,6 +284,7 @@
         .envelope.open .card-invitation {
             opacity: 1;
             transform: translate(-50%, -120%);
+            animation: envelope-glow 1.1s ease-out;
         }
 
         /* carta ya en el centro de la pantalla */
@@ -281,6 +295,20 @@
             transform: translate(-50%, -50%) !important;
             z-index: 1500 !important;
             transition: transform 0.9s ease, opacity 0.9s ease;
+        }
+
+        @keyframes envelope-glow {
+            0% {
+                box-shadow: 0 20px 40px rgba(0, 0, 0, 0.18);
+            }
+
+            40% {
+                box-shadow: 0 0 55px rgba(181, 157, 126, 0.7);
+            }
+
+            100% {
+                box-shadow: 0 20px 40px rgba(0, 0, 0, 0.18);
+            }
         }
 
         /* animación de la carta hacia el header */
@@ -563,6 +591,12 @@
             flex: 1;
             min-width: 320px;
             border-top: 5px solid var(--color-eucalipto);
+            transition: transform 0.18s ease, box-shadow 0.18s ease;
+        }
+
+        .card-map:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 14px 40px rgba(0, 0, 0, 0.08);
         }
 
         .card-map iframe {
@@ -589,6 +623,22 @@
         .btn-premium:hover {
             background: var(--color-acento);
             transform: translateY(-2px);
+        }
+
+        /* Botones y controles con micro-interacción */
+        .btn-premium,
+        .btn-primary,
+        .gift-iban-copy-btn,
+        #floating-confirm-btn {
+            transition: background 0.2s ease, transform 0.12s ease, box-shadow 0.12s ease;
+        }
+
+        .btn-premium:active,
+        .btn-primary:active,
+        .gift-iban-copy-btn:active,
+        #floating-confirm-btn:active {
+            transform: translateY(1px) scale(0.98);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.18);
         }
 
         .btn-premium.btn-disabled {
@@ -935,6 +985,14 @@
             border: 1px solid #ddd;
             border-radius: 5px;
             font-family: inherit;
+        }
+
+        /* Inputs y selects: foco suave y profesional */
+        input:focus,
+        select:focus {
+            outline: none;
+            border-color: var(--color-dorado);
+            box-shadow: 0 0 0 2px rgba(181, 157, 126, 0.25);
         }
 
         .checkbox-group {
@@ -1643,6 +1701,12 @@
         .btn-primary:hover {
             background: var(--color-acento);
             transform: translateY(-2px);
+        }
+
+        /* Variante cuando ya han confirmado asistencia */
+        .btn-primary--confirmed {
+            background: #4caf50;
+            color: #fff;
         }
 
         /* === AJUSTES EXTRA VERSIÓN MÓVIL (COHERENCIA DE TAMAÑOS) === */
