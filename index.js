@@ -452,8 +452,17 @@
 
         function openEnvelope() {
             const song = document.getElementById('wedding-song');
-            song.volume = 0.03;
-            song.play().catch(() => { });
+            const envelopeSound = document.getElementById('envelope-sound');
+
+            if (envelopeSound) {
+                envelopeSound.currentTime = 0;
+                envelopeSound.play().catch(() => { });
+            }
+
+            if (song) {
+                song.volume = 0.03;
+                song.play().catch(() => { });
+            }
 
             const envelope = document.getElementById('envelope');
             const card = envelope.querySelector('.card-invitation');
