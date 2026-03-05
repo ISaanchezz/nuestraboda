@@ -1259,7 +1259,7 @@
             }
 
             .section {
-                margin: 170px auto;
+                margin: 150px auto;
             }
 
             /* Timeline vertical (más legible) */
@@ -1340,10 +1340,12 @@
             /* 1) Hero: título + contador más centrados y contenidos estrechos */
             #hero {
                 align-items: center;
+                min-height: auto;
+                padding-bottom: 60px;
             }
 
             #hero > * {
-                max-width: 420px;
+                max-width: 400px;
             }
 
             /* 2) Nuestra historia: centrar la columna en pantallas pequeñas */
@@ -1459,12 +1461,39 @@
                 max-width: 380px;
                 margin-left: auto;
                 margin-right: auto;
+                margin-bottom: 120px;
             }
 
             #mesas-link {
                 display: inline-block;
                 max-width: 220px;
                 white-space: normal;
+            }
+
+            /* Reducir espacio interno debajo de los botones en varios bloques */
+            #el-dia,
+            #donde,
+            #playlist,
+            #regalo,
+            #plano-mesas-section,
+            #galeria {
+                padding-bottom: 18px;
+            }
+
+            /* CTA de confirmar asistencia en la landing: menos hueco debajo del botón */
+            #confirmar-cta {
+                padding-bottom: 22px !important;
+            }
+
+            /* Botón del plano de mesas y del álbum: centrados con poco margen inferior */
+            #mesas-link,
+            #el-dia .btn-premium {
+                margin-bottom: 4px;
+            }
+
+            /* Botón de calendario: margen inferior pequeño para no dejar hueco enorme */
+            .calendar-btn {
+                margin-bottom: 8px;
             }
         }
 

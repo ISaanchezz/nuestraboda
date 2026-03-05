@@ -42,22 +42,39 @@ body {
 
 @media (max-width: 550px) {
     .section-confirm-page {
-        padding-top: 80px;
-        padding-bottom: 80px;
+        padding-top: 70px;
+        padding-bottom: 70px;
     }
 
     .section-confirm-page .form-container {
-        max-width: 380px;
+        max-width: 360px;
         width: 100%;
-        padding: 24px 18px;
-        border-radius: 20px;
-        box-shadow: 0 12px 40px rgba(0, 0, 0, 0.05);
+        padding: 20px 16px 16px;
+        border-radius: 18px;
+        box-shadow: 0 10px 32px rgba(0, 0, 0, 0.05);
     }
 
-    /* Botón de enviar un poco más pequeño y proporcionado al bloque */
-    #submit-btn {
-        padding: 12px 20px;
+    /* Inputs y selects un poco más pequeños para que no “reventen” el bloque */
+    .section-confirm-page input,
+    .section-confirm-page select {
         font-size: 0.95rem;
+        padding: 8px 10px;
+        min-height: 36px;
+    }
+
+    /* Botón de enviar más pequeño, centrado y dentro del bloque */
+    #submit-btn {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+        max-width: 230px;
+        width: auto !important;
+        display: block;
+        margin: 12px auto 4px;
+    }
+
+    /* Reducir hueco bajo el formulario */
+    #wedding-form {
+        margin-bottom: 8px;
     }
 }
 
