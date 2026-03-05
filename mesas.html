@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plano de Mesas - Boda Iván & Nuria</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Playfair+Display:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="mesas.css">
+</head>
+
+<body>
+    <header>
+        <h1>Plano de Mesas</h1>
+        <p>Encuentra tu mesa buscando por tu nombre.</p>
+        <a href="#" id="back-to-invite" class="back-link">
+            ← Volver a la invitación
+        </a>
+    </header>
+
+    <main class="main-layout">
+        <section class="card" aria-label="Buscador de mesa por nombre">
+            <h2><span class="icon">🔍</span> Consulta tu mesa</h2>
+            <p class="hint">Escribe tu nombre tal y como aparece en la invitación. La búsqueda se actualiza al momento.
+            </p>
+
+            <div class="search-group">
+                <input type="text" id="guest-search" placeholder="Ej: Juan Pérez">
+                <button type="button" id="clear-search">Limpiar</button>
+            </div>
+
+            <div class="search-result" id="search-result">
+                Escribe tu nombre para ver tu mesa.
+            </div>
+
+            <div class="tag-pill">
+                Consejo: también puedes buscar por apellido.
+            </div>
+        </section>
+
+        <aside class="card" aria-label="Detalle de mesa seleccionada">
+            <div class="side-panel-section">
+                <h3>Mesa seleccionada</h3>
+                <p id="selected-table">Ninguna todavía. Pulsa en una mesa del plano o busca tu nombre.</p>
+            </div>
+
+            <div class="side-panel-section">
+                <h3>Cómo leer el plano</h3>
+                <p>Cada círculo es una mesa. Dentro verás el número y debajo, su nombre (familia, amigos, etc.).</p>
+                <div class="legend">
+                    <div class="legend-item">
+                        <span class="legend-dot"></span> Normal
+                    </div>
+                    <div class="legend-item">
+                        <span class="legend-dot active"></span> Mesa donde estás
+                    </div>
+                </div>
+            </div>
+        </aside>
+    </main>
+
+    <section class="card" style="max-width: 1200px; margin: 0 auto 26px; padding-top: 16px;">
+        <h2><span class="icon">🪑</span> Plano de mesas</h2>
+        <p class="hint">Haz clic en una mesa para ver quién se sienta en ella. Si has buscado tu nombre, resaltaremos tu
+            sitio.</p>
+
+        <div class="tables-map" id="tables-map" aria-label="Plano interactivo de mesas">
+            <!-- Se rellena por JavaScript -->
+        </div>
+    </section>
+
+    <footer>
+        Distribución orientativa. Cualquier cambio de última hora lo indicaremos el día de la boda 💚
+    </footer>
+    <script src="mesas.js"></script>
+</body>
+
+</html>

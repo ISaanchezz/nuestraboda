@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Álbum de fotos - Boda Iván & Nuria</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Playfair+Display:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="album.css">
+</head>
+
+<body>
+    <header>
+        <h1>Álbum de fotos</h1>
+        <p>Comparte con nosotros tus fotos de la boda 💚</p>
+    </header>
+
+    <main>
+        <section class="card" aria-label="Álbum compartido de fotos">
+            <h2>Sube aquí tus fotos</h2>
+            <p>
+                Hemos creado un álbum compartido para que podáis subir directamente vuestras fotos
+                de la boda. Momentos espontáneos, bailes, selfies… ¡todo suma!
+            </p>
+            <p>
+                Al abrir el álbum podrás:
+            </p>
+            <ul>
+                <li>Ver las fotos que vayan subiendo los invitados.</li>
+                <li>Añadir tus propias fotos y vídeos al instante.</li>
+            </ul>
+
+            <details>
+                <summary>¿Cómo subir fotos?</summary>
+                <p>1. Tener Google Fotos</p>
+                <p>2. Pulsa "Añadir fotos"</p>
+                <p>3. Selecciona desde tu galería</p>
+                <p>4. Confirma y listo 💚</p>
+            </details>
+
+            <!-- SUSTITUYE ESTE ENLACE POR EL DE TU ÁLBUM COMPARTIDO (por ejemplo Google Fotos) -->
+            <a href="https://photos.app.goo.gl/7YadLHwrnHtN8Smg9" target="_blank" rel="noopener noreferrer"
+                class="btn-main" id="album-loading-button">
+                <span class="button-text">📷 Abrir álbum compartido</span>
+                <span class="loading-text" aria-hidden="true">
+                    <div class="loading-content">
+                        <span class="spinner"></span>
+                        Cargando los mejores momentos...
+                    </div>
+                </span>
+            </a>
+
+            <a href="#" id="back-to-invite" class="back-link">
+                ← Volver a la invitación
+            </a>
+        </section>
+    </main>
+
+    <footer>
+        Álbum compartido de la boda de Iván &amp; Nuria
+    </footer>
+    <script src="album.js"></script>
+</body>
+
+</html>
