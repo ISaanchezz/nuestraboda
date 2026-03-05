@@ -1465,3 +1465,43 @@
             background: var(--color-dorado);
             color: #202825;
         }
+
+        /* === AJUSTES EXTRA VERSIÓN MÓVIL (COHERENCIA DE TAMAÑOS) === */
+        @media (max-width: 550px) {
+            /* Altura mínima cómoda para tap en campos y botones */
+            input,
+            select,
+            .btn-premium,
+            .gift-iban-copy-btn,
+            #floating-confirm-btn {
+                min-height: 44px;
+            }
+
+            /* Cuadro IBAN: mismo ancho visual que el resto y centrado */
+            .gift-iban-box {
+                width: 100%;
+                max-width: 360px;
+                box-sizing: border-box;
+                justify-content: center;
+                flex-wrap: wrap;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .gift-iban-code {
+                text-align: center;
+                word-break: break-word;
+            }
+
+            .gift-iban-msg {
+                text-align: center;
+                width: 100%;
+            }
+
+            /* Formularios y bloques centrados horizontalmente */
+            .form-container,
+            .section-window > * {
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
