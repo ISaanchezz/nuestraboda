@@ -106,14 +106,13 @@
         window.addEventListener('scroll', revealOnScroll);
         window.addEventListener('load', revealOnScroll);
 
-        function personalizeGuest() {
+        function personalizeGuestLanding() {
             const params = new URLSearchParams(window.location.search);
             const guest = params.get('invitado');
 
             if (guest) {
                 const decodedName = decodeURIComponent(guest);
 
-                // 1) Personalizar sello del sobre
                 const seal = document.getElementById('envelope-seal');
                 if (seal) {
                     const shortName = decodedName.length > 12
@@ -123,31 +122,16 @@
                     seal.textContent = shortName;
                 }
 
-                // 2) Personalizar texto de la carta
                 const cardTitle = document.getElementById('card-invitation-title');
                 if (cardTitle) {
                     cardTitle.textContent = `${decodedName}, nos casamos 💚`;
                 }
 
-                // 3) Autorrellenar formulario
-                const input = document.getElementById('guest-input');
-                if (input) {
-                    input.value = decodedName;
-                    input.style.backgroundColor = "#f5f5f5";
-                    input.style.fontWeight = "bold";
-                }
-
-                // 4) Personalizar header principal
                 const mainHeader = document.querySelector('#main-content header h1');
                 if (mainHeader) {
                     mainHeader.textContent = `${decodedName}, queremos celebrar contigo 💚`;
                 }
 
-                // 5) Personalizar botones de confirmación
-                const submitBtn = document.getElementById('submit-btn');
-                if (submitBtn) {
-                    submitBtn.textContent = `Confirmar asistencia, ${decodedName}`;
-                }
                 const floatingBtn = document.getElementById('floating-confirm-btn');
                 if (floatingBtn) {
                     floatingBtn.textContent = `Confirmar asistencia, ${decodedName}`;
@@ -187,8 +171,7 @@
         }
 
         window.addEventListener('load', () => {
-            personalizeGuest();
-            applyFormSubmittedState();
+            personalizeGuestLanding();
         });
 
         function enableMesasLink() {
@@ -628,40 +611,6 @@
             }, 1500);
         }
 
-        // Envío Formulario Nativo
-        const form = document.getElementById('wedding-form');
-        form.addEventListener('submit', e => {
-            e.preventDefault();
-            const btn = document.getElementById('submit-btn');
-            btn.disabled = true; btn.innerText = "Guardando...";
-
-            const scriptURL = 'https://script.google.com/macros/s/AKfycbwMOYv9vtDvTXGz30hq0le7UASZDyEEvy8ndIP2l4bglntfgIqhwogcP2ksH5OB7HTtnA/exec';
-
-            const formData = new FormData(form);
-            const preferences = formData.getAll('Preferencia').join(', ');
-            formData.set('Preferencia', preferences);
-
-            fetch(scriptURL, { method: 'POST', body: formData })
-                .then(() => {
-                    softVibrate();
-                    launchFireworks();
-                    showCheckAnimation();
-                    form.style.display = 'none';
-                    document.getElementById('success-msg').style.display = 'block';
-                    // Marcar invitación como enviada en este navegador
-                    try {
-                        const key = getInviteStorageKey();
-                        if (key) {
-                            localStorage.setItem(key, '1');
-                        }
-                    } catch (e) { }
-                })
-                .catch(() => {
-                    alert('Error al enviar. Inténtalo de nuevo.');
-                    btn.disabled = false; btn.innerText = "ENVIAR CONFIRMACIÓN";
-                });
-        });
-
         // Copiar IBAN regalo
         (function setupGiftIbanCopy() {
             const btn = document.getElementById('gift-iban-copy-btn');
@@ -702,14 +651,13 @@
             btn.addEventListener('click', copyIban);
         })();
 
-        // Botón fijo Confirmar asistencia (scroll al formulario)
+        // Botón fijo Confirmar asistencia (redirige a página de confirmación)
         (function setupFloatingConfirm() {
             const btn = document.getElementById('floating-confirm-btn');
-            const target = document.getElementById('confirmar-asistencia');
-            if (!btn || !target) return;
+            if (!btn) return;
 
             btn.addEventListener('click', () => {
-                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                window.location.href = "confirmar.html" + window.location.search;
             });
         })();
 

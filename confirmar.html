@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmar asistencia - Boda Iván & Nuria</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Playfair+Display:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon-192x192.png">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="confirmar.css">
+</head>
+
+<body>
+    <div class="scroll-progress-wrapper">
+        <div id="scroll-progress-bar" class="scroll-progress-bar"></div>
+    </div>
+
+    <main class="section-window section-confirm-page">
+        <section id="confirmar-asistencia" class="form-container">
+            <h1 id="confirm-title" style="font-family: 'Dancing Script'; font-size: 3rem; color: var(--color-dorado);">
+                📝 Confirmar Asistencia
+            </h1>
+            <p class="confirm-subtitle">
+                Cuéntanos si podremos celebrar contigo y si necesitas que tengamos en cuenta algo especial.
+            </p>
+
+            <form id="wedding-form">
+                <div class="form-group">
+                    <label>👤 Nombre y Apellidos</label>
+                    <input type="text" id="guest-input" name="Nombre" required>
+                </div>
+                <div class="form-group">
+                    <label>✅ ¿Contamos contigo?</label>
+                    <select name="Asistencia" required>
+                        <option value="Sí">¡Sí, allí estaré!</option>
+                        <option value="No">Lo siento, no podré ir</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>👥 ¿Traes acompañantes?</label>
+                    <select id="has-partner" name="Acompañante_SiNo" onchange="togglePartner()">
+                        <option value="No">No</option>
+                        <option value="Sí">Sí</option>
+                    </select>
+                </div>
+                <div id="partner-details"
+                    style="display:none; background: #fdfaf5; padding: 20px; border-radius: 10px; margin-bottom: 20px;">
+                    <div class="form-group">
+                        <label>👥 ¿Cuántos acompañantes?</label>
+                        <input type="number" name="Num_Acompañantes" value="1" min="1">
+                    </div>
+                    <div class="form-group">
+                        <label>📝 Nombres de acompañantes</label>
+                        <input type="text" name="Nombres_Acompañantes">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>🍽️ Preferencias Alimentarias (puedes elegir varias)</label>
+                    <div class="checkbox-group">
+                        <div class="checkbox-item"><input type="checkbox" name="Preferencia" value="Ninguna"><span>🙂
+                                Ninguna</span></div>
+                        <div class="checkbox-item"><input type="checkbox" name="Preferencia" value="Celíaco"><span>🌾🚫
+                                Celíaco</span></div>
+                        <div class="checkbox-item"><input type="checkbox" name="Preferencia" value="Vegano"><span>🌱
+                                Vegano</span></div>
+                        <div class="checkbox-item"><input type="checkbox" name="Preferencia"
+                                value="Vegetariano"><span>🥦 Vegetariano</span></div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>⚠️ Otras Alergias / Notas</label>
+                    <input type="text" name="Alergias">
+                </div>
+                <div class="form-group">
+                    <label>🚌 ¿Necesitas plaza de Autobús?</label>
+                    <select id="bus-select" name="Autobus" onchange="toggleBusDetails()">
+                        <option value="No">No</option>
+                        <option value="Sí">Sí</option>
+                    </select>
+                </div>
+                <div id="bus-details"
+                    style="display:none; background:#fdfaf5; padding:20px; border-radius:10px; margin-bottom:20px;">
+                    <p style="margin-top:0; font-weight:bold;">🚌 Más detalle del autobús</p>
+                    <ul style="text-align:left; padding-left: 1.2rem; margin: 10px 0 0; list-style: none;">
+                        <li>📍Salida de Navahondilla 12:00</li>
+                        <li>🚌 Salida hacia el banquete desde parada Pequeño Luchador 14:00</li>
+                        <li>🏡Primer bus de vuelta 22:00</li>
+                        <li>🏡Segundo bus de vuelta 1:00</li>
+                    </ul>
+                </div>
+                <div class="form-group">
+                    <label>🎵 ¿Qué canción te haría bailar?</label>
+                    <input type="text" name="Cancion">
+                </div>
+                <button type="submit" id="submit-btn" class="btn-premium" style="width:100%">ENVIAR
+                    CONFIRMACIÓN</button>
+            </form>
+
+            <div id="success-msg" style="display:none; padding:30px;">
+                <h3 style="font-family:'Dancing Script'; font-size: 2.5rem; color: var(--color-dorado);">¡Muchas
+                    Gracias! ✨</h3>
+                <p>Tu respuesta se ha guardado.</p>
+            </div>
+        </section>
+
+        <a href="index.html" class="back-link">
+            ← Volver a la invitación
+        </a>
+    </main>
+
+    <script src="confirmar.js"></script>
+</body>
+
+</html>
+

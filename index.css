@@ -1336,6 +1336,135 @@
             #plano-mesas-section {
                 margin-bottom: 200px;
             }
+
+            /* 1) Hero: título + contador más centrados y contenidos estrechos */
+            #hero {
+                align-items: center;
+            }
+
+            #hero > * {
+                max-width: 420px;
+            }
+
+            /* 2) Nuestra historia: centrar la columna en pantallas pequeñas */
+            .story-section,
+            .story-timeline {
+                max-width: 420px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .story-timeline::before {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+
+            .story-item {
+                padding-left: 20px;
+                padding-right: 20px;
+                text-align: center !important;
+            }
+
+            .story-content p {
+                text-align: left;
+            }
+
+            /* 3) Galería: centrar bloque y darle mismo estilo de “caja” que historia */
+            #galeria {
+                max-width: 420px;
+                margin-left: auto;
+                margin-right: auto;
+                background: #ffffff;
+                padding: 28px 20px;
+                border-radius: 20px;
+                box-shadow: 0 12px 35px rgba(0, 0, 0, 0.05);
+            }
+
+            /* 4) Álbum compartido: centrar y botón más pequeño dentro del bloque */
+            #el-dia {
+                max-width: 420px;
+                margin-left: auto;
+                margin-right: auto;
+                background: #ffffff;
+                padding: 28px 20px;
+                border-radius: 20px;
+                box-shadow: 0 12px 35px rgba(0, 0, 0, 0.05);
+            }
+
+            #el-dia .btn-premium {
+                padding: 12px 22px;
+                font-size: 0.95rem;
+                max-width: 260px;
+            }
+
+            /* 5) Timeline del día: centrar bloque general y hacerlo del color de historia */
+            #donde {
+                max-width: 420px;
+                margin-left: auto;
+                margin-right: auto;
+                background: #ffffff;
+                padding: 28px 20px 32px;
+                border-radius: 20px;
+                box-shadow: 0 12px 35px rgba(0, 0, 0, 0.05);
+            }
+
+            #donde .timeline {
+                max-width: 360px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            #donde .timeline-item {
+                max-width: 100%;
+            }
+
+            /* 6) ¿Dónde nos vemos?: centrar bloque y reducir tarjetas dentro */
+            #playlist {
+                max-width: 420px;
+                margin-left: auto;
+                margin-right: auto;
+                background: #ffffff;
+                padding: 28px 16px 32px;
+                border-radius: 20px;
+                box-shadow: 0 12px 35px rgba(0, 0, 0, 0.05);
+            }
+
+            #playlist .card-map {
+                max-width: 360px;
+                margin-left: auto;
+                margin-right: auto;
+                padding: 22px 16px;
+            }
+
+            /* 7) Playlist Spotify: centrar más el bloque */
+            #spotify-wrapper {
+                max-width: 420px !important;
+                padding: 28px 20px !important;
+            }
+
+            /* 8) Regalo: hacer el bloque más pequeño, centrado y con color tipo historia */
+            #regalo {
+                max-width: 420px;
+                margin-left: auto;
+                margin-right: auto;
+                background: #ffffff;
+                padding: 28px 20px 32px;
+                border-radius: 20px;
+                box-shadow: 0 12px 35px rgba(0, 0, 0, 0.05);
+            }
+
+            /* 9) Plano de mesas: centrar bloque y botón dentro */
+            #plano-mesas-section {
+                max-width: 420px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            #mesas-link {
+                display: inline-block;
+                max-width: 260px;
+                white-space: normal;
+            }
         }
 
         /* ==== LANDING POR SECCIONES (VENTANAS) ==== */
@@ -1464,6 +1593,26 @@
         body.night-mode .nav-list a.is-active {
             background: var(--color-dorado);
             color: #202825;
+        }
+
+        /* Botón primario genérico (enlace a confirmar.html en la landing) */
+        .btn-primary {
+            display: inline-block;
+            padding: 14px 30px;
+            background: var(--color-eucalipto);
+            color: white;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+            margin-top: 20px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-primary:hover {
+            background: var(--color-acento);
+            transform: translateY(-2px);
         }
 
         /* === AJUSTES EXTRA VERSIÓN MÓVIL (COHERENCIA DE TAMAÑOS) === */

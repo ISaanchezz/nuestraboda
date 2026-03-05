@@ -1,0 +1,41 @@
+body {
+    margin: 0;
+    font-family: 'Playfair Display', serif;
+    background-color: var(--color-crema);
+}
+
+.section-confirm-page {
+    min-height: 100vh;
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
+
+.section-confirm-page .form-container {
+    margin: 0 auto;
+}
+
+.confirm-subtitle {
+    margin-top: 8px;
+    margin-bottom: 24px;
+    color: #555;
+}
+
+.back-link {
+    display: inline-block;
+    margin-top: 26px;
+    color: var(--color-eucalipto);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 550px) {
+    .section-confirm-page {
+        padding-top: 90px;
+        padding-bottom: 90px;
+    }
+}
+
