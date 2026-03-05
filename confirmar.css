@@ -6,12 +6,20 @@ body {
 
 .section-confirm-page {
     min-height: 100vh;
-    padding-top: 120px;
-    padding-bottom: 120px;
+    padding-top: 110px;
+    padding-bottom: 110px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .section-confirm-page .form-container {
     margin: 0 auto;
+    max-width: 520px;
+    background: rgba(249, 247, 242, 0.96);
+    padding: 32px 28px;
+    border-radius: 24px;
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.06);
 }
 
 .confirm-subtitle {
@@ -34,8 +42,22 @@ body {
 
 @media (max-width: 550px) {
     .section-confirm-page {
-        padding-top: 90px;
-        padding-bottom: 90px;
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+
+    .section-confirm-page .form-container {
+        max-width: 380px;
+        width: 100%;
+        padding: 24px 18px;
+        border-radius: 20px;
+        box-shadow: 0 12px 40px rgba(0, 0, 0, 0.05);
+    }
+
+    /* Botón de enviar un poco más pequeño y proporcionado al bloque */
+    #submit-btn {
+        padding: 12px 20px;
+        font-size: 0.95rem;
     }
 }
 

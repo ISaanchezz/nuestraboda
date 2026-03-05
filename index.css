@@ -1369,100 +1369,101 @@
                 text-align: left;
             }
 
-            /* 3) Galería: centrar bloque y darle mismo estilo de “caja” que historia */
+            /* 3) Galería: centrar bloque y usar fondo beige tipo hero */
             #galeria {
-                max-width: 420px;
+                max-width: 400px;
                 margin-left: auto;
                 margin-right: auto;
-                background: #ffffff;
-                padding: 28px 20px;
+                background: rgba(249, 247, 242, 0.96);
+                padding: 22px 16px;
                 border-radius: 20px;
                 box-shadow: 0 12px 35px rgba(0, 0, 0, 0.05);
             }
 
             /* 4) Álbum compartido: centrar y botón más pequeño dentro del bloque */
             #el-dia {
-                max-width: 420px;
+                max-width: 380px;
                 margin-left: auto;
                 margin-right: auto;
-                background: #ffffff;
-                padding: 28px 20px;
+                background: rgba(249, 247, 242, 0.96);
+                padding: 20px 16px 24px;
                 border-radius: 20px;
                 box-shadow: 0 12px 35px rgba(0, 0, 0, 0.05);
             }
 
             #el-dia .btn-premium {
-                padding: 12px 22px;
-                font-size: 0.95rem;
-                max-width: 260px;
+                padding: 10px 20px;
+                font-size: 0.9rem;
+                max-width: 220px;
             }
 
             /* 5) Timeline del día: centrar bloque general y hacerlo del color de historia */
             #donde {
-                max-width: 420px;
+                max-width: 400px;
                 margin-left: auto;
                 margin-right: auto;
-                background: #ffffff;
-                padding: 28px 20px 32px;
+                background: rgba(249, 247, 242, 0.96);
+                padding: 22px 16px 26px;
                 border-radius: 20px;
                 box-shadow: 0 12px 35px rgba(0, 0, 0, 0.05);
             }
 
             #donde .timeline {
-                max-width: 360px;
+                max-width: 320px;
                 margin-left: auto;
                 margin-right: auto;
             }
 
             #donde .timeline-item {
-                max-width: 100%;
+                max-width: 260px;
+                padding: 10px 12px;
             }
 
             /* 6) ¿Dónde nos vemos?: centrar bloque y reducir tarjetas dentro */
             #playlist {
-                max-width: 420px;
+                max-width: 400px;
                 margin-left: auto;
                 margin-right: auto;
-                background: #ffffff;
-                padding: 28px 16px 32px;
+                background: rgba(249, 247, 242, 0.96);
+                padding: 22px 12px 26px;
                 border-radius: 20px;
                 box-shadow: 0 12px 35px rgba(0, 0, 0, 0.05);
             }
 
             #playlist .card-map {
-                max-width: 360px;
+                max-width: 320px;
                 margin-left: auto;
                 margin-right: auto;
-                padding: 22px 16px;
+                padding: 18px 12px;
             }
 
             /* 7) Playlist Spotify: centrar más el bloque */
             #spotify-wrapper {
-                max-width: 420px !important;
-                padding: 28px 20px !important;
+                max-width: 400px !important;
+                padding: 22px 16px !important;
             }
 
             /* 8) Regalo: hacer el bloque más pequeño, centrado y con color tipo historia */
             #regalo {
-                max-width: 420px;
+                max-width: 400px;
                 margin-left: auto;
                 margin-right: auto;
-                background: #ffffff;
-                padding: 28px 20px 32px;
+                background: rgba(249, 247, 242, 0.96);
+                padding: 22px 16px 26px;
                 border-radius: 20px;
                 box-shadow: 0 12px 35px rgba(0, 0, 0, 0.05);
             }
 
             /* 9) Plano de mesas: centrar bloque y botón dentro */
             #plano-mesas-section {
-                max-width: 420px;
+                max-width: 380px;
                 margin-left: auto;
                 margin-right: auto;
             }
 
             #mesas-link {
                 display: inline-block;
-                max-width: 260px;
+                max-width: 220px;
                 white-space: normal;
             }
         }
